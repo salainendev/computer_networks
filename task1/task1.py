@@ -21,9 +21,9 @@ def ping_domain(domain):
     try:
         response = requests.get("http://" + domain, timeout=5)  
         site_ip = socket.gethostbyname(domain)
-        return "Success",site_ip if response.status_code == 200 else "Failed"
+        return ("Success",site_ip) if response.status_code == 200 else ("Failed",-1)
     except requests.exceptions.RequestException as e:
-        return f"Failed: {e}"
+        return "Failed",-1
 
 
 with open("ping_results.csv", "w", newline="") as csvfile:
