@@ -62,19 +62,7 @@ def main():
     search_products(driver, query)
     sleep(randint(2,4))
     parsed_data = parse_page(driver)
-    # Парсинг страниц с товарами
-    # parsed_data = []
-    # for page_num in range(1, num_pages + 1):
-    #     # Парсинг товаров на текущей странице
-    #     parsed_products = parse_page(driver)
-    #     parsed_data.extend(parsed_products)
-    #     # Переход на следующую страницу, если есть
-    #     next_button = driver.find_element_by_class_name("next-page")  # Замените на правильный класс кнопки перехода на следующую страницу
-    #     if next_button and next_button.is_enabled():
-    #         next_button.click()
-    #         WebDriverWait(driver, 10).until(EC.staleness_of(next_button))
-
-    # Закрыть браузер
+ 
     write_to_csv(parsed_data, 'products_data.csv')
     driver.quit()
 
