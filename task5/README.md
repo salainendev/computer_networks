@@ -7,7 +7,7 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 	| sudo tee /etc/apt/sources.list.d/ngrok.list \
 	&& sudo apt update \
 	&& sudo apt install ngrok
-ngrok config add-authtoken 2g5zWm7BJJgbbDq2B0AqUqtuMCt_2uA9keKpG1hd4dzQiVwMG
+ngrok config add-authtoken <ваш токен с сайта ngrok , там надо зарегаться>
 ```
 #### установить докер-образы (я надеюсь докер у вас есть)
 ```bash
