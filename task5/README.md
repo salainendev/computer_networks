@@ -1,6 +1,7 @@
 ### Перед запуском:
 #### установить ngrok по инструкции с сайта
 ```bash
+sudo apt install nginx
 docker pull mysql:latest
 docker pull wordpress:latest
 
